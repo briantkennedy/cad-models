@@ -1,9 +1,12 @@
 //
 
+// it was about .5mm off over 40.5mm for the width
+prusai3fudge = .5/40.5 + 1;
+
 wallSize = 2;
 spoutWidth = 40.5;
 spoutHeight = 25.8;
-spoutWidthOuter = spoutWidth+wallSize*2;
+spoutWidthOuter = (spoutWidth+wallSize*2) * prusai3fudge;
 spoutHeightOuter = spoutHeight+wallSize*2;
 
 module Conduit(length=100, angle=45) {
@@ -22,7 +25,7 @@ module Conduit(length=100, angle=45) {
 
 
 attachLen = 4;
-spoutLen = 30;
+spoutLen = 25;
 angle = 50;
 
 Conduit(attachLen, angle);
