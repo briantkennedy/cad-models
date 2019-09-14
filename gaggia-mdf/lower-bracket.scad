@@ -1,15 +1,15 @@
 
 
-height = 2;
-width = 4;
+height = 1;
+width = 2;
 
 l1 = 71.5;
-l2 = 38.62;
+l2 = 33;
 l3=24.5;
 
 // python
 // math.acos(28/38.62) / math.pi * 180
-theta= 43.5;
+theta = asin(28 / l2);
 
 cube([l1, width, height]);
 translate([l1, 0, 0])
