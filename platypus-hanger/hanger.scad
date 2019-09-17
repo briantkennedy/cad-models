@@ -6,9 +6,9 @@ inner_notch = 5.23;
 inner_extra= 3;
 // inner_l1 = inner_full - inner_notch;
 // inner_l2 = inner_full - inner_l1;
-inner_diameter = 11;
+inner_diameter = 10.8;
 inner_radius=inner_diameter/2;
-inner_short = 9.95;
+inner_short = 9.3;
     /*
 https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#$fa,_$fs_and_$fn
     */
@@ -48,9 +48,12 @@ translate([rod_len+rod_shift-tip_len, rod_shift, hook_radius*2])
 cube([tip_len, inner_diameter, inner_diameter]);
 
 // tube hanger
-tube_clearance = 14;
-translate([bag_clearance+snap_clearance+inner_diameter, rod_shift, -tube_clearance-inner_diameter*2])
-cube([30, inner_diameter, inner_diameter]);
+tube_clearance = 12;
+translate(
+    [bag_clearance+snap_clearance+inner_diameter,
+     rod_shift,
+     -tube_clearance-inner_diameter*2])
+cube([25, inner_diameter, inner_diameter]);
 translate([bag_clearance+snap_clearance,rod_shift,-inner_diameter-(tube_clearance+inner_diameter)])
 cube([inner_diameter, inner_diameter, tube_clearance+inner_diameter]);
 
